@@ -15,19 +15,20 @@ const header = props => {
           <h2 className="subtitle">
             React.Js + Bulma
           </h2>
-          <button class="button is-primary is-medium is-rounded">New Task</button>
+          <button onClick={props.addTask}
+                  className="button is-primary is-medium is-rounded">New Task</button>
         </div>
       </div>
       <div className="tabs is-centered is-boxed is-medium">
         <ul>
           <li className={props.isTaskActive ? 'is-active' : ''}>
-            <a onClick={() => props.tabClick(true)}>
+            <a href="/#" onClick={() => props.tabClick(true)}>
               <span>Active</span>&nbsp;&nbsp;
               <span className="tag is-rounded is-warning">{task_number}</span>
             </a>
           </li>
           <li className={props.isTaskActive ? '' : 'is-active'}>
-            <a onClick={() => props.tabClick(false)}>
+            <a href="/#" onClick={() => props.tabClick(false)}>
               <span>Complete</span>&nbsp;&nbsp;
               <span className="tag is-rounded is-warning">{complete_number}</span>
             </a>
